@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "出纳窗";
+}
+
+<hgroup class="page-header">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+
+
+<div class="container" style="background-color:#ffffff">
+    <div class="row">
+        <div class="col-md-6" style="background-color:#ffffff">
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-primary btn-lg ">借</button>
+            &nbsp;&nbsp;
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success btn-lg">还</button>
+            &nbsp;&nbsp;
+            <!-- Contextual button for informational alert messages -->
+            <button type="button" class="btn btn-info btn-lg">续借</button>
+            <br />
+            <br />
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">您现在是借书输入框</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group form-inline">
+                            <label for="inputEmail3" class="col-sm-3 control-label">读者证条码号</label>
+                            <input type="email" class="form-control col-sm-8" id="inputEmail3" placeholder="读者证条码号">
+                            &nbsp;<button type="submit" class="btn btn-primary">装载</button>
+                        </div>
+                        <div class="form-group  form-inline">
+                            <label for="inputPassword3" class="col-sm-3 control-label">册条码号</label>
+                            <input type="password" class="form-control  col-sm-8" id="inputPassword3" placeholder="册条码号">
+                            &nbsp;<button type="submit" class="btn btn-primary">&nbsp;借&nbsp;&nbsp;</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">操作状态</h3>
+                </div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr><th class="col-lg-1">状态</th><th>操作</th><th>信息</th></tr>
+                    </thead>
+                    <tr><td><span class="glyphicon glyphicon-ok"></span></td><td>装载读者信息</td><td>成功装载</td><td></td></tr>
+                    <tr><td><span class="glyphicon glyphicon-exclamation-sign "></span></td><td>R001借C001</td><td>删条码号不存在!</td></tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="col-md-6" style="background-color:#ffffff">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">读者信息</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table  table-striped">
+                        <tr>
+                            <td>读者证条码号</td>
+                            <td> R001</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                读者类别
+                            </td>
+                            <td> 本科生</td>
+                        </tr>
+                        <tr><td>姓名</td><td> jane</td></tr>
+
+                    </table>
+                </div>
+
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">借阅信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table  table-striped">
+                            <tr>
+                                <td>读者证条码号</td>
+                                <td> R001</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    读者类别
+                                </td>
+                                <td> 本科生</td>
+                            </tr>
+                            <tr><td>姓名</td><td> jane</td></tr>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">预约请求</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table  table-striped">
+                            <tr>
+                                <td>读者证条码号</td>
+                                <td> R001</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    读者类别
+                                </td>
+                                <td> 本科生</td>
+                            </tr>
+                            <tr><td>姓名</td><td> jane</td></tr>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
