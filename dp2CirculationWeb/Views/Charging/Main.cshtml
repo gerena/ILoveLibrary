@@ -12,50 +12,48 @@
     <div class="row">
         <div class="col-md-6" style="background-color:#ffffff">
             <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-            <button type="button" class="btn btn-primary btn-lg ">借</button>
+            <button type="button" class="btn btn-primary btn-lg " id="borrow">借</button>
             &nbsp;&nbsp;
             <!-- Indicates a successful or positive action -->
-            <button type="button" class="btn btn-success btn-lg">还</button>
+            <button type="button" class="btn btn-success btn-lg" id="return">还</button>
             &nbsp;&nbsp;
             <!-- Contextual button for informational alert messages -->
-            <button type="button" class="btn btn-info btn-lg">续借</button>
+            <button type="button" class="btn btn-info btn-lg" id="renew">续借</button>
             <br />
             <br />
-            <div class="panel panel-primary">
+            <div class="panel panel-primary" id="operPanel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">您现在是借书输入框</h3>
+                    <h3 class="panel-title" id="operPanelTitle">您现在是借书输入框</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form">
-                        <div class="form-group form-inline">
-                            <label for="inputEmail3" class="col-sm-3 control-label">读者证条码号</label>
-                            <input type="email" class="form-control col-sm-8" id="inputEmail3" placeholder="读者证条码号">
-                            &nbsp;<button type="submit" class="btn btn-primary">装载</button>
+                        <div class="form-group form-inline" id="divReaderBarcode">
+                            <label id="lblReaderBarcode" class="col-sm-3 control-label">读者证条码号</label>
+                            <input type="text" class="form-control col-sm-8" id="txtReaderBarcode" placeholder="读者证条码号">
+                            &nbsp;<button type="button" class="btn btn-primary" id="btnLoad">装载</button>
                         </div>
-                        <div class="form-group  form-inline">
-                            <label for="inputPassword3" class="col-sm-3 control-label">册条码号</label>
-                            <input type="password" class="form-control  col-sm-8" id="inputPassword3" placeholder="册条码号">
-                            &nbsp;<button type="submit" class="btn btn-primary">&nbsp;借&nbsp;&nbsp;</button>
+                        <div class="form-group  form-inline" id="divItemBarcode">
+                            <label id="lblItemBarcode" class="col-sm-3 control-label">册条码号</label>
+                            <input type="text" class="form-control  col-sm-8" id="txtItemBarcode" placeholder="册条码号">
+                            &nbsp;<button type="submit" class="btn btn-primary" id="btnDo">&nbsp;借&nbsp;&nbsp;</button>
                         </div>
                     </form>
                 </div>
 
             </div>
 
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">操作状态</h3>
-                </div>
+            <div class="panel panel-default">
+ 
                 <!-- Table -->
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr style="background-color:#DDDDDD">
                         <th class="col-lg-1">状态</th>
                         <th>操作</th>
                         <th>信息</th></tr>
                     </thead>
                     <tr>
-                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                    <td><font color="green"><span class="glyphicon glyphicon-ok"></span></font></td>
                     <td>装载读者信息</td>
                     <td>成功装载</td>
                     </tr>
@@ -82,9 +80,9 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td style ="background-color:#EEEEEE">
+                            <td style="background-color:#EEEEEE">
                                 读者类别
-                            </tdstyle>
+                            </td>
                             <td> 本科生</td>
                             <td style="background-color:#EEEEEE">失效日期</td>
                             <td>2016/1/1 </td>
@@ -159,3 +157,50 @@
         </div>
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+
+
+
+        $("#borrow").click(function () {
+            // 更改pannel
+            $("#operPanel").removeClass("panel-success panel-info panel-primary").addClass("panel-primary");
+            $("#btnLoad").removeClass("btn-success btn-info btn-primary").addClass("btn-primary");
+            $("#btnDo").removeClass("btn-success btn-info btn-primary").addClass("btn-primary");
+            $("#divReaderBarcode").show();
+
+            $("#operPanelTitle").text("您现在是借书输入框");
+
+            //alert("borrow");
+        });
+
+        $("#return").click(function () {
+
+            // 更改pannel
+            $("#operPanel").removeClass("panel-success panel-info panel-primary").addClass("panel-success");
+            $("#btnLoad").removeClass("btn-success btn-info btn-primary").addClass("btn-success");
+            $("#btnDo").removeClass("btn-success btn-info btn-primary").addClass("btn-success");
+
+            $("#divReaderBarcode").hide();
+
+            $("#operPanelTitle").text("您现在是还书输入框");
+            //alert("return");
+        });
+
+        $("#renew").click(function () {
+
+            // 更改pannel
+            $("#operPanel").removeClass("panel-success panel-info panel-primary").addClass("panel-info");
+            $("#btnLoad").removeClass("btn-success btn-info btn-primary").addClass("btn-info");
+            $("#btnDo").removeClass("btn-success btn-info btn-primary").addClass("btn-info");
+
+            $("#operPanelTitle").text("您现在是续借输入框");
+
+            $("#divReaderBarcode").show();
+            //alert("renew");
+        });
+
+    </script>
+}

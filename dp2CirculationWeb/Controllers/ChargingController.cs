@@ -13,6 +13,7 @@ namespace dp2CirculationWeb.Controllers
 
         public ActionResult Main()
         {
+            /*
             string accountName = "";
             if (Session["AcountName"] != null)
                 accountName = (string)Session["AcountName"];
@@ -21,7 +22,7 @@ namespace dp2CirculationWeb.Controllers
             {
                 return this.RedirectToAction("Login", "Account");
             }
-
+            */
             return View();
         }
 
