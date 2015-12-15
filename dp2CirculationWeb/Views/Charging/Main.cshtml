@@ -3,7 +3,7 @@
 }
 
 <hgroup class="page-header">
-    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Title</h2>
 </hgroup>
 
 
@@ -42,17 +42,27 @@
 
             </div>
 
-            <div class="panel panel-danger">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">操作状态</h3>
                 </div>
                 <!-- Table -->
                 <table class="table">
                     <thead>
-                        <tr><th class="col-lg-1">状态</th><th>操作</th><th>信息</th></tr>
+                        <tr>
+                        <th class="col-lg-1">状态</th>
+                        <th>操作</th>
+                        <th>信息</th></tr>
                     </thead>
-                    <tr><td><span class="glyphicon glyphicon-ok"></span></td><td>装载读者信息</td><td>成功装载</td><td></td></tr>
-                    <tr><td><span class="glyphicon glyphicon-exclamation-sign "></span></td><td>R001借C001</td><td>删条码号不存在!</td></tr>
+                    <tr>
+                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                    <td>装载读者信息</td>
+                    <td>成功装载</td>
+                    </tr>
+                    <tr class="danger">
+                    <td><font color="red"><span class="glyphicon glyphicon-exclamation-sign "></span></font></td>
+                    <td>R001借C001</td>
+                    <td>删条码号不存在!</td></tr>
                 </table>
             </div>
         </div>
@@ -64,18 +74,27 @@
                     <h3 class="panel-title">读者信息</h3>
                 </div>
                 <div class="panel-body">
-                    <table class="table  table-striped">
+                    <table class="table">
                         <tr>
-                            <td>读者证条码号</td>
+                            <td style="background-color:#EEEEEE">读者证条码号</td>
                             <td> R001</td>
+                            <td style="background-color:#EEEEEE">证状态</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td style ="background-color:#EEEEEE">
                                 读者类别
-                            </td>
+                            </tdstyle>
                             <td> 本科生</td>
+                            <td style="background-color:#EEEEEE">失效日期</td>
+                            <td>2016/1/1 </td>
                         </tr>
-                        <tr><td>姓名</td><td> jane</td></tr>
+                        <tr>
+                            <td style="background-color:#EEEEEE">姓名</td>
+                            <td> jane</td>
+                            <td style="background-color:#EEEEEE">单位</td>
+                            <td>&nbsp;</td>
+                        </tr>
 
                     </table>
                 </div>
@@ -86,17 +105,27 @@
                     </div>
                     <div class="panel-body">
                         <table class="table  table-striped">
-                            <tr>
-                                <td>读者证条码号</td>
-                                <td> R001</td>
+                            <thead></thead>
+                            <tr>                                         
+                                <th>册条码号</th>
+                                <th>摘要</th>
+                                <th>价格</th>
+                                <th>续借次</th>
+                                <th>借阅日期</th>
+                                <th>期限</th>
+                                <th>操作者</th>
+                                <th>应还日期</th>
                             </tr>
                             <tr>
-                                <td>
-                                    读者类别
-                                </td>
-                                <td> 本科生</td>
+                                <td>C001</td>
+                                <td>中国机读目录格式使用手册 / 北京图书馆《中国机读目录格式使用手册》编委会. -- ISBN 7-80039-990-7 : ￥58.00</td>
+                                <td>20.00</td>
+                                <td>2次</td>
+                                <td>2015/12/15</td>
+                                <td>31天</td>
+                                <td>supervisor</td>
+                                <td>2016/1/15</td>
                             </tr>
-                            <tr><td>姓名</td><td> jane</td></tr>
 
                         </table>
                     </div>
@@ -109,16 +138,16 @@
                     <div class="panel-body">
                         <table class="table  table-striped">
                             <tr>
-                                <td>读者证条码号</td>
-                                <td> R001</td>
+                                <td></td>
+                                <td> </td>
                             </tr>
                             <tr>
                                 <td>
-                                    读者类别
+                                    
                                 </td>
-                                <td> 本科生</td>
+                                <td> </td>
                             </tr>
-                            <tr><td>姓名</td><td> jane</td></tr>
+                            <tr><td></td><td> </td></tr>
 
                         </table>
                     </div>
